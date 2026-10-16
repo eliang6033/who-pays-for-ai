@@ -1,26 +1,27 @@
-Validation completed 2026-10-15
+Immersive simulator validation — 2026-10-15
 
 Production build: PASS (Vite 7.3.7)
-Automated tests: 9 / 9 PASS
-Scenario matrix: all 24 combinations finite and nonnegative
-Research body: 21 paragraphs, 1530 whitespace-delimited English words
-References: 10, all cited in the body; 5 peer reviewed publications
-DOCX: all 21 research paragraphs matched the web source exactly
-DOCX visual check: all 7 pages rendered and inspected
+Automated tests: 15 / 15 PASS
+Scenario matrix: all 24 combinations, including sequential decision gating
+Research body: unchanged 21 paragraphs, 1530 whitespace-delimited English words
+References: unchanged 10 sources, including 5 peer reviewed publications
+DOCX: all 21 research paragraphs match the website; updated experience description
+DOCX visual QA: updated page 1 rendered and inspected; pages 2–7 render identically to the previously inspected pages
 
-Browser checks performed on the local Vite site:
-- Desktop and mobile layouts inspected (no page-level horizontal overflow at the narrow viewport)
-- Electricity, cooling, cost allocation and income controls update results
-- Same facility physical outputs remain independent of household income
-- Saved configuration compares correctly against changed current settings
-- Downloaded scenario report opened and checked
-- Reading view hides simulation while retaining all 21 research paragraphs
-- Internal citation and navigation anchors resolve
-- Keyboard Enter activates the cooling button
-- Browser console: no recorded errors at final check
+Browser checks on local Vite site:
+- Desktop and narrow mobile layouts inspected, no page-level horizontal overflow
+- Only one decision fieldset at a time; Next requires a choice
+- Annual results are absent until all four decisions are complete
+- Electricity, cooling and cost selections change the illustrated scene and explanation
+- Back retains decisions; fresh run clears decisions and gates results again
+- Saved scenario comparison retains the original configuration
+- Resource and household results checked against model values
+- Research contains all 21 paragraphs and preserves simulator progress on return
+- Result tabs support arrow-key navigation and preserve the selected tab
+- Mobile illustration remains visible above the active decision while scrolling
+- Browser console: no recorded errors during the walkthrough
 
-GitHub Actions deployment: SUCCESS
-Run: https://github.com/eliang6033/who-pays-for-ai/actions/runs/38829106814
-Public website: https://eliang6033.github.io/who-pays-for-ai/
-Live verification: complete 1530-word research text, interactive cooling and cost controls, no recorded browser console errors.
-The optional standalone HTML uses the same production bundle; direct file:// browser preview was unavailable in the test browser.
+Report exporter uses the previously verified calculation/export format.
+GitHub Pages workflow will run tests and build again on publication.
+Public URL: https://eliang6033.github.io/who-pays-for-ai/
+The optional standalone HTML contains the production bundle; direct file:// preview was unavailable in the test browser.

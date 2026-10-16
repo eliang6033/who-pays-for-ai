@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {experienceReducer as reduce, initialExperience, STEP_KEYS} from '../src/experience.js';
+import {COMMUNITIES,ENERGY,COOLING,COSTS,simulate} from '../src/simulation.js';
+const sample=['lower','grid','evaporative','shared'];
+function completed(values=sample){let s=reduce(initialExperience,{type:'BEGIN'});for(const value of values){s=reduce(s,{type:'CHOOSE',value});s=reduce(s,{type:'NEXT'});}return s;}
+test('a new run begins with no selected defaults or calculated results',()=>{assert.equal(initialExperience.phase,'briefing');assert.deepEqual(initialExperience.choices,{});assert.equal(reduce(initialExperience,{type:'NEXT'}),initialExperience);});
+test('every decision is required before advancing and results unlock only after all four',()=>{let s=reduce(initialExperience,{type:'BEGIN'});sample.forEach((value,i)=>{assert.equal(s.phase,'decision');assert.equal(s.step,i);assert.equal(reduce(s,{type:'NEXT'}),s);s=reduce(s,{type:'CHOOSE',value});s=reduce(s,{type:'NEXT'});});assert.equal(s.phase,'results');assert.equal(Object.keys(s.choices).length,4);});
+test('invalid or out-of-step choices cannot bypass gating',()=>{const s=reduce(initialExperience,{type:'BEGIN'});assert.equal(reduce(s,{type:'CHOOSE',value:'grid'}),s);assert.equal(reduce(s,{type:'CHOOSE',value:'toString'}),s);assert.equal(reduce(s,{type:'CHOOSE',value:'__proto__'}),s);});
+test('back preserves choices and editing returns through decisions without exposing results',()=>{const r=completed();let s=reduce(r,{type:'EDIT'});assert.equal(s.phase,'decision');s=reduce(s,{type:'NEXT'});assert.equal(s.step,1);s=reduce(s,{type:'BACK'});assert.equal(s.step,0);assert.deepEqual(s.choices,r.choices);});
+test('saved scenario is a snapshot and survives a fresh gated run',()=>{let s=reduce(completed(),{type:'SAVE'});const saved={...s.saved};s=reduce(s,{type:'REPLAY'});assert.equal(s.phase,'decision');assert.deepEqual(s.choices,{});assert.deepEqual(s.saved,saved);s=reduce(s,{type:'CHOOSE',value:'higher'});assert.equal(s.saved.community,'lower');assert.equal(s.choices.community,'higher');});
+test('all 24 paths reach valid results only after four choices',()=>{let count=0;for(const community of Object.keys(COMMUNITIES))for(const energy of Object.keys(ENERGY))for(const cooling of Object.keys(COOLING))for(const costs of Object.keys(COSTS)){const s=completed([community,energy,cooling,costs]);assert.equal(s.phase,'results');assert.ok(simulate(s.choices).electricityMWh>0);count++;}assert.equal(count,24);});
