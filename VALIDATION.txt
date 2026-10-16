@@ -1,0 +1,23 @@
+Validation completed 2026-10-15
+
+Production build: PASS (Vite 7.3.7)
+Automated tests: 9 / 9 PASS
+Scenario matrix: all 24 combinations finite and nonnegative
+Research body: 21 paragraphs, 1530 whitespace-delimited English words
+References: 10, all cited in the body; 5 peer reviewed publications
+DOCX: all 21 research paragraphs matched the web source exactly
+DOCX visual check: all 7 pages rendered and inspected
+
+Browser checks performed on the local Vite site:
+- Desktop and mobile layouts inspected (no page-level horizontal overflow at the narrow viewport)
+- Electricity, cooling, cost allocation and income controls update results
+- Same facility physical outputs remain independent of household income
+- Saved configuration compares correctly against changed current settings
+- Downloaded scenario report opened and checked
+- Reading view hides simulation while retaining all 21 research paragraphs
+- Internal citation and navigation anchors resolve
+- Keyboard Enter activates the cooling button
+- Browser console: no recorded errors at final check
+
+Not yet verified: actual GitHub Actions deployment on the user's new repository.
+The optional standalone HTML uses the same production bundle; direct file:// browser preview was unavailable in the test browser.

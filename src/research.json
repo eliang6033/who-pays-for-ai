@@ -1,0 +1,180 @@
+{
+  "title": "Who Pays for AI?",
+  "subtitle": "The environmental costs of data centers and the choices that distribute them",
+  "sections": [
+    {
+      "id": "physical",
+      "title": "The cloud has a physical address",
+      "eyebrow": "01 / The question",
+      "paragraphs": [
+        "An AI response arrives on a screen, but producing it requires physical infrastructure. Servers draw electricity, cooling equipment removes heat, and utilities connect facilities to shared systems. The people benefiting from a digital service may live far from the people hosting that infrastructure. This creates the central question of this project: when AI expands, who receives its benefits, and who carries its environmental and financial costs?",
+        "The International Energy Agency estimates that data centers worldwide consumed 485 terawatt hours of electricity in 2025. Its central projection reaches approximately 950 terawatt hours in 2030. These totals include non-AI services, and the future figure is a projection, not an observed outcome [1]. Treating all data center electricity as AI electricity would overstate what the evidence establishes.",
+        "This website argues that responsible development requires both resource efficiency and fair cost allocation. Visitors test a fictional facility, change its electricity and cooling choices, and compare household burdens. The exercise makes relationships visible without claiming to predict a particular city. Research establishes the problem; clearly labeled assumptions make the interactive comparison possible. Neither a dramatic headline nor a single efficiency metric can answer the question alone. Understanding this distinction matters because a public discussion can support useful technology while still questioning a particular location, an avoidable resource cost, or an agreement that shifts risk onto residents."
+      ]
+    },
+    {
+      "id": "electricity",
+      "title": "Electricity connects a facility to a region",
+      "eyebrow": "02 / Electricity",
+      "paragraphs": [
+        "Electricity demand is an operating requirement, while carbon emissions depend partly on how that electricity is generated. These are related but different measures. A facility can consume the same amount of electricity under two supply arrangements and have different estimated operational emissions. Lower carbon electricity therefore changes one consequence of demand; it does not remove the need for generation, transmission, or cooling.",
+        "Berkeley Lab estimates that United States data centers used 176 terawatt hours in 2023, about 4.4 percent of national electricity consumption [2]. This national estimate gives context, but it does not describe a specific neighborhood. Local planning requires information about available capacity, connection timing, and the particular equipment being installed. Masanet and colleagues found that efficiency improvements offset much computing growth during 2010–2018 [8]. That historical result does not guarantee that current AI demand will follow the same path.",
+        "The simulation holds computing activity constant and applies an assumed emissions factor to total facility electricity. This follows the basic accounting relationship described in EPA guidance, although the factors here are teaching inputs rather than measured regional values [6]. The result excludes hardware manufacturing, construction, and backup generators. It also cannot show which power plant responds to an additional hour of demand. Visitors should read the carbon display as a bounded comparison, not a complete environmental footprint. An annual accounting number is useful for comparison, but planners also need to understand when demand occurs. A reliable supply agreement must work during difficult hours as well as ordinary ones."
+      ]
+    },
+    {
+      "id": "water",
+      "title": "Saving water can change the energy bill",
+      "eyebrow": "03 / Cooling",
+      "paragraphs": [
+        "Servers release heat that must be removed. Evaporative cooling consumes water as part of that process. Mytton explains that cooling requirements depend on ambient conditions and that onsite water measures omit consumption associated with electricity generation [3]. Dry cooling reduces direct water use in our scenario, but its assumed electricity penalty is a teaching choice, not a universal finding.",
+        "In this model, dry cooling uses less onsite water and more electricity than evaporative cooling. The exact coefficients are invented for instruction and disclosed in the methods. The direction of the tradeoff is research informed; its numerical size is not a measured finding. Choosing lower carbon electricity can reduce the modeled emissions associated with the extra power, but does not erase that power demand.",
+        "The water display covers direct facility consumption only. Water used in electricity generation lies outside its boundary. Research on United States data centers shows that location and electricity supply both shape environmental consequences [7]. A volume consumed in a stressed watershed has a different significance from the same volume elsewhere. Because this exercise does not model watersheds, seasons, or drought, it reports liters without assigning a fictional water stress score. Reducing direct consumption should therefore begin a wider discussion about water sources and timing. A dry cooling label alone cannot establish that a facility has eliminated its effects on water systems."
+      ]
+    },
+    {
+      "id": "households",
+      "title": "The same bill does not mean the same burden",
+      "eyebrow": "04 / Households",
+      "paragraphs": [
+        "Energy burden describes household energy spending as a share of income. It helps explain why an equal dollar increase can have unequal consequences. ACEEE uses this measure to examine affordability across households and cities [4]. Income is important, but housing quality, local prices, and heating or cooling needs also influence actual bills. A simple comparison cannot capture all of those conditions.",
+        "The two communities here are deliberately fictional. Both begin with an annual household energy bill of $1,800. One has an assumed annual household income of $30,000; the other has $100,000. Before any upgrade charge, their modeled burdens are 6 percent and 1.8 percent. An identical $100 annual charge raises those figures to about 6.33 percent and 1.90 percent. These are arithmetic examples, not survey findings.",
+        "Changing community income does not change the facility's water use, electricity demand, or emissions. It changes the affordability comparison. This design avoids assuming that a lower income automatically means a dirtier grid or greater water scarcity. The question is how the same financial decision interacts with different household resources, and what protections might make that decision more equitable. The larger percentage does not tell us exactly how a family will respond. It identifies a financial constraint that could deserve closer attention through local evidence and conversations with affected households."
+      ]
+    },
+    {
+      "id": "costs",
+      "title": "Infrastructure costs are a public choice",
+      "eyebrow": "05 / Who pays",
+      "paragraphs": [
+        "A new facility may require additional grid infrastructure. Whether the developer, other customers, or a combination of both pays depends on contracts and regulatory decisions. It should not be assumed that every data center produces the same residential surcharge. In July 2025, Ohio's utility regulator ordered a data center specific tariff for AEP Ohio, identifying protection against cost shifting as a reason [5]. This is one dated policy example, not a national rule.",
+        "Our exercise represents that choice with three allocations: the company pays, residents pay, or each pays half. It divides an assumed $20 million upgrade over ten years and 10,000 households. There is no interest, changing customer count, or negotiated rate structure. The simplified calculation makes the allocation visible; it does not estimate an actual utility tariff.",
+        "Moving the cost to the company removes this modeled household charge, but leaves the physical demand unchanged. The company could also respond through pricing or investment decisions that the model does not represent. A fair agreement therefore needs more than a reassuring label. Communities need to know which costs are covered, for how long, and who bears the risk if projected demand fails to appear. Residents should be able to understand an agreement before construction begins. Public access to assumptions, responsibilities, and review procedures would help people evaluate whether promised protections are specific enough to enforce."
+      ]
+    },
+    {
+      "id": "comparison",
+      "title": "Compare choices without hiding tradeoffs",
+      "eyebrow": "06 / Reading the results",
+      "paragraphs": [
+        "A useful comparison changes one decision at a time. First hold the facility and community constant, then switch cooling systems. The water and electricity displays move in opposite directions under the stated assumptions. Next change electricity supply. Estimated operational emissions fall, while electricity demand and direct water use remain unchanged. Finally change who pays and observe the household comparison.",
+        "These experiments separate engineering decisions from distributional decisions. An efficient facility can still operate under an unfair cost agreement. A company funded upgrade can protect household budgets while leaving substantial resource demands. No single green indicator proves that the overall project is fair or sustainable.",
+        "The comparison panel places both incomes beside each other under identical facility settings. Visitors can also save a configuration and compare it with their next choice. Luccioni and colleagues measured substantial differences in inference energy across the models and tasks they tested [9]. Their findings support treating workload as important, rather than assigning one universal footprint to every AI request. Our model fixes workload to isolate infrastructure choices. Before supporting a real proposal, residents could ask for seasonal water estimates, an electricity supply plan, and clear financial responsibilities."
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "What the model leaves open",
+      "eyebrow": "07 / Limits and conclusion",
+      "paragraphs": [
+        "This project combines published evidence with a deliberately small teaching model. Its fixed workload excludes future growth, varying utilization, and changes in computing efficiency. Its annual averages hide hot days and peak demand. It does not calculate jobs, tax revenue, land impacts, equipment supply chains, or the possible social benefits of AI. Those omissions prevent a comprehensive judgment about any real facility.",
+        "The sources also have different scopes and dates. Global electricity estimates, national water research, household affordability measures, and one state’s tariff decision answer different questions. They should not become a false prediction of local harm. Henderson and colleagues advocate systematic reporting of machine learning energy and carbon footprints [10]. That principle motivates our separation of assumptions, calculations, and published evidence. A real assessment would also need local participation.",
+        "The conclusion is that responsibility has two connected parts: reducing resource demand and deciding fairly who pays. Transparent assumptions make the first conversation more useful; transparent agreements make the second accountable. The website asks visitors to examine both before calling a data center sustainable. For readers, the practical lesson is to ask both a measurement question and a fairness question: what resources are required, and whose interests are represented when the terms are set?"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "author": "International Energy Agency",
+      "year": "2026",
+      "title": "Key Questions on Energy and AI",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+      "note": "2025 global estimate and 2030 central projection for all data centers, not AI alone. Published April 16, 2026.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance"
+    },
+    {
+      "id": 2,
+      "author": "Shehabi, A., Smith, S. J., Hubbard, A., Newkirk, A., Lei, N., Siddik, M. A. B., Holecek, B., Koomey, J., Masanet, E., and Sartor, D.",
+      "year": "2024",
+      "title": "2024 United States Data Center Energy Usage Report",
+      "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/us_data_center_energy_usage_report_lbnl-2001637_0.pdf",
+      "note": "Lawrence Berkeley National Laboratory. LBNL-2001637. DOI 10.71468/P1WC7Q. Electricity estimates on pages 5–6.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance"
+    },
+    {
+      "id": 3,
+      "author": "Mytton, D.",
+      "year": "2021",
+      "title": "Data centre water consumption",
+      "url": "https://doi.org/10.1038/s41545-021-00101-w",
+      "note": "npj Clean Water, 4, Article 11. Peer reviewed Perspective; explains water consumption and measurement boundaries, not a universal dry cooling penalty.",
+      "peerReviewed": true,
+      "kind": "Peer reviewed Perspective"
+    },
+    {
+      "id": 4,
+      "author": "American Council for an Energy-Efficient Economy",
+      "year": "2024",
+      "title": "Data Update: City Energy Burdens",
+      "url": "https://www.aceee.org/sites/default/files/pdfs/data_update_-_city_energy_burdens_0.pdf",
+      "note": "September 2024 brief. Used for the energy burden concept, not to attribute household bills to data centers.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance"
+    },
+    {
+      "id": 5,
+      "author": "Public Utilities Commission of Ohio",
+      "year": "2025",
+      "title": "PUCO orders AEP Ohio to create data center specific tariff",
+      "url": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79",
+      "note": "July 9, 2025. A dated example of infrastructure risk allocation, not a nationwide rule or current tariff audit.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance"
+    },
+    {
+      "id": 6,
+      "author": "U.S. Environmental Protection Agency",
+      "year": "2025",
+      "title": "eGRID: Determining Emissions from Electricity Use",
+      "url": "https://www.epa.gov/system/files/documents/2025-01/using-egrid-to-determine-emissions.pdf",
+      "note": "Supports annual electricity emissions accounting. Website factors are illustrative, not extracted eGRID values.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance"
+    },
+    {
+      "id": 7,
+      "author": "Siddik, M. A. B., Shehabi, A., and Marston, L.",
+      "year": "2021",
+      "title": "The environmental footprint of data centers in the United States",
+      "url": "https://doi.org/10.1088/1748-9326/abfba1",
+      "note": "Environmental Research Letters, 16(6), 064017. Peer reviewed spatial analysis. Open manuscript: https://escholarship.org/uc/item/3xw3z2qp",
+      "peerReviewed": true,
+      "kind": "Peer reviewed research article"
+    },
+    {
+      "id": 8,
+      "author": "Masanet, E., Shehabi, A., Lei, N., Smith, S., and Koomey, J.",
+      "year": "2020",
+      "title": "Recalibrating global data center energy-use estimates",
+      "url": "https://doi.org/10.1126/science.aba3758",
+      "note": "Science, 367(6481), 984–986. Peer reviewed Policy Forum. Historical efficiency analysis for 2010–2018, not a forecast of AI demand.",
+      "peerReviewed": true,
+      "kind": "Peer reviewed Policy Forum"
+    },
+    {
+      "id": 9,
+      "author": "Luccioni, A. S., Jernite, Y., and Strubell, E.",
+      "year": "2024",
+      "title": "Power Hungry Processing: Watts Driving the Cost of AI Deployment?",
+      "url": "https://doi.org/10.1145/3630106.3658542",
+      "note": "Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency, 85–99. Peer reviewed conference paper. Benchmark findings do not imply a universal per-prompt footprint.",
+      "peerReviewed": true,
+      "kind": "Peer reviewed conference paper"
+    },
+    {
+      "id": 10,
+      "author": "Henderson, P., Hu, J., Romoff, J., Brunskill, E., Jurafsky, D., and Pineau, J.",
+      "year": "2020",
+      "title": "Towards the Systematic Reporting of the Energy and Carbon Footprints of Machine Learning",
+      "url": "https://www.jmlr.org/papers/v21/20-312.html",
+      "note": "Journal of Machine Learning Research, 21(248), 1–43. Peer reviewed journal article on transparent energy and emissions reporting.",
+      "peerReviewed": true,
+      "kind": "Peer reviewed research article"
+    }
+  ],
+  "wordCount": 1530,
+  "wordCountRule": "Whitespace-separated words in the seven research sections; excludes headings, citation markers, interface text, methods and references."
+}
