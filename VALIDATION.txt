@@ -25,3 +25,8 @@ Report exporter uses the previously verified calculation/export format.
 GitHub Pages workflow will run tests and build again on publication.
 Public URL: https://eliang6033.github.io/who-pays-for-ai/
 The optional standalone HTML contains the production bundle; direct file:// preview was unavailable in the test browser.
+
+Immersive version publication: SUCCESS
+Commit: 66711bb1760e3bb0a4496de4a93474b06d568d28
+Actions: https://github.com/eliang6033/who-pays-for-ai/actions/runs/38831439591
+Live browser verification: briefing, gated choices, changing electricity scene, all four decisions and final resource results; no recorded console errors.
