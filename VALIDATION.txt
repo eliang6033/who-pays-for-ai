@@ -19,5 +19,8 @@ Browser checks performed on the local Vite site:
 - Keyboard Enter activates the cooling button
 - Browser console: no recorded errors at final check
 
-Not yet verified: actual GitHub Actions deployment on the user's new repository.
+GitHub Actions deployment: SUCCESS
+Run: https://github.com/eliang6033/who-pays-for-ai/actions/runs/38829106814
+Public website: https://eliang6033.github.io/who-pays-for-ai/
+Live verification: complete 1530-word research text, interactive cooling and cost controls, no recorded browser console errors.
 The optional standalone HTML uses the same production bundle; direct file:// browser preview was unavailable in the test browser.
