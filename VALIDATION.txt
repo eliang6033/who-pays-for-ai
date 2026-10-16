@@ -30,3 +30,12 @@ Immersive version publication: SUCCESS
 Commit: 66711bb1760e3bb0a4496de4a93474b06d568d28
 Actions: https://github.com/eliang6033/who-pays-for-ai/actions/runs/38831439591
 Live browser verification: briefing, gated choices, changing electricity scene, all four decisions and final resource results; no recorded console errors.
+
+Construction animation update — 2026-10-15
+- Browser observed early and completed wind turbine assembly, blade installation and rotor rotation; replay resets animation.
+- Camera zoom returns to identity after the inspection sequence.
+- Grid line drawing uses normalized SVG path lengths.
+- Dry cooling units/fans and evaporative tower shells/caps/vapor enter in sequence.
+- Company and resident funding paths appear in sequence.
+- Mobile viewport 390 × 844: no horizontal overflow; sticky scene, replay and decisions remain usable.
+- Motion is CSS-only with prefers-reduced-motion overrides; simulation data and research text unchanged.
