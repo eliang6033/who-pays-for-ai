@@ -49,7 +49,8 @@
       "paragraphs": [
         "A new facility may require additional grid infrastructure. Whether the developer, other customers, or a combination of both pays depends on contracts and regulatory decisions. It should not be assumed that every data center produces the same residential surcharge. In July 2025, Ohio's utility regulator ordered a data center specific tariff for AEP Ohio, identifying protection against cost shifting as a reason [5]. This is one dated policy example, not a national rule.",
         "Our exercise represents that choice with three allocations: the company pays, residents pay, or each pays half. It divides an assumed $20 million upgrade over ten years and 10,000 households. There is no interest, changing customer count, or negotiated rate structure. The simplified calculation makes the allocation visible; it does not estimate an actual utility tariff.",
-        "Moving the cost to the company removes this modeled household charge, but leaves the physical demand unchanged. The company could also respond through pricing or investment decisions that the model does not represent. A fair agreement therefore needs more than a reassuring label. Communities need to know which costs are covered, for how long, and who bears the risk if projected demand fails to appear. Residents should be able to understand an agreement before construction begins. Public access to assumptions, responsibilities, and review procedures would help people evaluate whether promised protections are specific enough to enforce."
+        "Moving the cost to the company removes this modeled household charge, but leaves the physical demand unchanged. The company could also respond through pricing or investment decisions that the model does not represent. A fair agreement therefore needs more than a reassuring label. Communities need to know which costs are covered, for how long, and who bears the risk if projected demand fails to appear. Residents should be able to understand an agreement before construction begins. Public access to assumptions, responsibilities, and review procedures would help people evaluate whether promised protections are specific enough to enforce.",
+        "Meadows’s course reading identifies information flows and system rules as places to intervene, and describes how existing advantages can reinforce themselves over time [11]. Applied here, that framework connects resource use to the institutions deciding who pays. A household with fewer financial resources has less room to absorb an added charge; the income comparison illustrates that constraint without explaining its entire history. Public access to resource estimates could help residents question a proposal, while a funding agreement could assign responsibility for specific costs. These are applications of Meadows’s framework, not data center examples from her essay. They make the rules and decision-making process part of the sustainability question."
       ]
     },
     {
@@ -173,8 +174,18 @@
       "note": "Journal of Machine Learning Research, 21(248), 1–43. Peer reviewed journal article on transparent energy and emissions reporting.",
       "peerReviewed": true,
       "kind": "Peer reviewed research article"
+    },
+    {
+      "id": 11,
+      "author": "Meadows, D. H.",
+      "year": "1999",
+      "title": "Leverage Points: Places to Intervene in a System",
+      "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/",
+      "note": "The Sustainability Institute. Assigned course reading. Information flows, rules, and reinforcing advantages provide a systems framework; the data center applications are this project’s interpretation.",
+      "peerReviewed": false,
+      "kind": "Course reading"
     }
   ],
-  "wordCount": 1530,
+  "wordCount": 1638,
   "wordCountRule": "Whitespace-separated words in the seven research sections; excludes headings, citation markers, interface text, methods and references."
 }

@@ -39,3 +39,22 @@ Construction animation update — 2026-10-15
 - Company and resident funding paths appear in sequence.
 - Mobile viewport 390 × 844: no horizontal overflow; sticky scene, replay and decisions remain usable.
 - Motion is CSS-only with prefers-reduced-motion overrides; simulation data and research text unchanged.
+
+2026-10-18 local research synchronization (not deployed):
+Full essay: 22 paragraphs, 1638 words excluding citation markers. All original 21 paragraphs retained; one Meadows course-reading paragraph added.
+Rough draft: 1340 words, 5 body pages plus 2 reference pages. Every paragraph is an excerpt from the full essay.
+References: same 11 source identities, URLs and numbering across the local website and both Word documents; 5 peer reviewed. Original 10 references retained.
+Word documents rendered and all pages visually reviewed. Vite production build passed.
+
+
+2026-10-18 drag-and-drop workshop (local only, not deployed):
+- 17 automated tests pass: scenario arithmetic/gating, all 24 paths, reference coverage, normalized placement and outside-drop rejection.
+- Updated two stale research test expectations to the already-approved 1638-word essay and 10 external sources + 1 course reading. No research text or model coefficient changed.
+- Browser: real pointer drags for household, wind power, water/air cooling, and funding; installed object repositioning and water-to-air replacement verified.
+- Outside drop leaves next disabled; Escape cancels without replacing an existing choice.
+- Keyboard Enter picks up a part, focuses the installation target, and Enter installs it.
+- Desktop and narrow viewport layouts inspected without horizontal overflow. Narrow-screen layout and click placement checked; no physical touch-device test.
+- Completed higher-income/grid/dry/shared path: 94.6 GWh, 1.4 million L, 37.8 kt CO2e; $100 yearly household surcharge; 1.90% higher-income and 6.33% lower-income energy burden.
+- No browser console errors recorded during walkthrough.
+- Reduced-motion rules disable workshop and part animations. Placement is visual only; it does not change physical model parameters.
+- DOCX files remain the MLA versions, unchanged in this update.
