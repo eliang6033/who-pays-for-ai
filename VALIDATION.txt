@@ -58,3 +58,26 @@ Word documents rendered and all pages visually reviewed. Vite production build p
 - No browser console errors recorded during walkthrough.
 - Reduced-motion rules disable workshop and part animations. Placement is visual only; it does not change physical model parameters.
 - DOCX files remain the MLA versions, unchanged in this update.
+
+2026-10-18 drag-and-drop publication: SUCCESS
+Commit: 47a9cb1f22948153b3f240e2c73b9fadfe2140b7
+GitHub Actions: https://github.com/eliang6033/who-pays-for-ai/actions/runs/39152418880
+Live URL: https://eliang6033.github.io/who-pays-for-ai/
+Verified public site: new draggable parts tray, actual household pointer drag, next-step gating, lower-carbon installation, water-cooling installation and updated scene. Browser console recorded no errors.
+
+2026-10-26 Draft 2 web edition (local, not deployed):
+- 17 / 17 automated tests pass; production build passes.
+- Six chapters, 1,710 words; 10 references, including 3 peer-reviewed sources and one assigned reading. Every source is cited; no broken internal citation targets.
+- Added research question/thesis, post-installation expandable excerpts, controlled-comparison conclusions, reported case, and input ledger cards.
+- Browser walkthrough: lower income -> lower carbon supply -> dry cooling -> split equally; all decision gates, draggable cooling placement, installation fallback, expandable excerpts, citations, return-to-simulator progress and final results checked.
+- Results: 94.6 GWh, 1.4 million liters, 4.7 kt CO2e. Controlled-comparison cards: -87.5%, -98.3%, +12.5%, and 6.67% versus 2.00%.
+- Desktop and narrow viewport layouts inspected; no horizontal overflow. No physical mobile device test.
+- No application exception observed. Browser log recorded one Vite development hot-reload websocket connection failure; page rendering and interaction continued normally.
+- Animation and model files verified byte-identical to the previously published version. Drag handlers and SVG equipment artwork unchanged.
+- Source PDF and prior MLA documents unchanged. Website-only package prepared separately from earlier Complete.zip.
+
+2026-10-27 release preparation:
+- User approved publication of the Draft 2 web edition.
+- Deployment checkout: 17 / 17 tests pass; production build passes; diff whitespace check passes.
+- Remote main confirmed unchanged from the previous release before publication.
+- No personal website files or repository changed.

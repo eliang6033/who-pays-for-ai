@@ -1,0 +1,26 @@
+Draft 2 website integration — 26 October 2026
+
+Source: Eli Liang Syn 2 rough draft (1).pdf, PDF pages 8–15.
+Only Draft 2 was used as the revised essay. Draft 1, assignment prompts, and peer-review text were not treated as instructions or included as essay chapters.
+
+Six body chapters follow the draft: Introduction; Electricity Use; Cooling and Water Use; Income and Cost Sharing; Results and Limitations; Conclusion.
+The six chapters contain 1,710 whitespace-delimited words excluding numbered citation markers. Selected passages are also available after installation decisions. Duplicate excerpts, summaries, case cards and interface labels are not counted in that total.
+
+The source table is incorporated into the input ledger, together with the pre-existing detailed coefficients and equations. The ledger distinguishes computing electricity from total facility electricity and marks all scenario inputs as hypothetical.
+
+Editorial clarifications:
+- Jarboe reports a household near a cryptocurrency mining campus, not a verified AI data center. Its contribution to bill changes is not isolated. The household's income is not inferred or assigned one of the fictional model incomes.
+- IEA's 2030 demand value is a central projection, not a certain outcome.
+- Masanet's historical global estimate and LBNL's newer US projection have different geography and time periods; they are not one continuous series.
+- The 400 and 50 kg CO2e/MWh factors are illustrative assumptions, not claimed exact current regional averages.
+- Dry cooling's possible water/electricity tradeoff is supported by research; its numerical size here is assumed.
+- Model comparisons use exact coefficients: 87.5% lower emissions for the lower-carbon factor; 98.3% lower direct water and 12.5% higher facility electricity with dry cooling; 6.67% versus 2.00% total household energy burden when residents pay the upgrade.
+- Facility electricity demand does not feed into household electricity prices in this model. Only the upgrade allocation changes the household surcharge.
+- The Ohio tariff is described within its scope. The text does not assert that the Kasnik household is protected or that the reported crypto facility is exempt for a specific reason.
+- HB 646 is described as a stalled effort reported in June 2026, not a claim about its present legal status.
+
+References: same ten source identities as Draft 2, numbered for the website: IEA; Shehabi/LBNL; Mytton; ACEEE; PUCO; EPA; Siddik; Masanet; Meadows; Jarboe. Three are peer reviewed. The two additional peer-reviewed sources from the older website were removed to follow the supplied Draft 2 bibliography; the prior requirement for at least five peer-reviewed sources is therefore not met by this draft's bibliography.
+
+Preserved: World.jsx, builder.css, simulator.css, simulation.js, experience.js and placement.js; the drag handlers and equipment artwork in BuildStage.jsx. New reading components are appended to the existing interaction, not substituted for it.
+
+The source PDF and existing MLA Word documents were not edited. Publication was authorized on 27 October 2026. Deployment is handled by the independent repository’s GitHub Actions workflow.

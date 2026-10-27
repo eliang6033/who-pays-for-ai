@@ -1,6 +1,7 @@
 import {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import World from './World.jsx';
+import {ResearchNote} from './Story.jsx';
 import {scenePoint} from './placement.js';
 import './builder.css';
 
@@ -68,6 +69,7 @@ export default function BuildStage({step, index, choices, dispatch, onResearch})
   </div>
   <div className="workshop-feedback" role="status" aria-live="polite">{message||(selected?`${selected.label} is installed. Drag it to reposition, or swap in another part.`:'No part installed yet. Try dragging one from the tray into the scene.')}</div>
   <div className="workshop-bottom"><div className="placement-explanation"><span className="sim-kicker">{selected?'Your choice, explained':'Build first. Discover the consequences.'}</span><h2>{selected?selected.title:labels[step.key]}</h2><p>{selected?selected.description:step.context}</p><button className="sim-link" onClick={()=>onResearch(`source-${step.source}`)}>Research behind this decision [{step.source}] ↗</button></div><div className="decision-navigation"><button className="sim-back" onClick={()=>dispatch({type:'BACK'})} aria-label={index===0?'Back to briefing':'Previous decision'}>←</button><button className="sim-next" disabled={!selected||!!drag} onClick={()=>dispatch({type:'NEXT'})}>{index===3?'Run the year':'Keep building'} <span>→</span></button></div></div>
+  {selected&&<ResearchNote kind={step.key} onResearch={onResearch}/>}
   {drag&&createPortal(<div className={`carried-part ${drag.over?'can-drop':''}`} style={{left:drag.x,top:drag.y}}><PartArt kind={step.key} value={drag.value}/><span>{drag.over?'Release to install':'Move onto the site'}</span></div>,document.body)}
  </div>;
 }
