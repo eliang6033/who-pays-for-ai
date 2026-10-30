@@ -1,8 +1,8 @@
 {
   "title": "Who Pays for AI?",
   "subtitle": "The environmental costs of data centers and the choices that distribute them",
-  "revision": "Draft 2 · Web edition",
-  "updated": "26 October 2026",
+  "revision": "Final draft · Web edition",
+  "updated": "29 October 2026",
   "question": "How do choices about power source, cooling, and cost sharing affect the environmental costs of AI data centers and the energy bills of nearby households?",
   "thesis": "Responsible AI growth needs technical choices that lower resource use and policy choices that share the remaining costs fairly.",
   "sections": [
@@ -12,9 +12,9 @@
       "eyebrow": "01 / Introduction",
       "takeaway": "The question behind the simulation",
       "paragraphs": [
-        "As an AI answer appears on a screen, there are real buildings and equipment running in the background to make it happen. Servers use power, cooling systems remove heat, and utilities connect data centers to shared grids. People who use AI may live far from the places that supply these resources. This raises my main driving question: how do choices about power source, cooling, and cost sharing affect the environmental costs of AI data centers and the energy bills of nearby households? My answer is that responsible AI growth needs two kinds of choices: technical choices that lower resource use, and policy choices that share the remaining costs fairly.",
-        "The International Energy Agency estimates that data centers used 485 terawatt-hours of electricity worldwide in 2025. Its central projection reaches about 950 terawatt-hours in 2030 [1]. These figures cover all data center services, not just AI. The future number is a projection, not a certainty. Growth on that scale would put pressure on electricity supply, power lines, and cooling systems. Decisions about where to build and who should pay therefore belong in the discussion of AI’s environmental costs.",
-        "This project shows how a data center’s electricity supply, cooling system, and grid upgrade agreement affect resource use and household energy costs in lower and higher income communities. I explore the question with an interactive simulation of a fictional data center. Published research provides the accounting methods and explains why the choices matter. The capacity, cooling values, household budgets, and cost allocation are simplified assumptions. The model shows relationships between these choices; it does not predict what will happen in a real city."
+        "As an AI answer appears on a screen, there are real buildings and equipment running in the background. Servers use power, cooling systems remove heat, and utilities connect data centers to shared grids. People who use AI may live far from the places that supply these resources. This raises my main driving question: how do choices about power source, cooling, and cost sharing affect the environmental costs of AI data centers and the energy bills of nearby households? My answer is that responsible AI growth needs two kinds of choices: technical choices that lower resource use, and policy choices that share the remaining costs fairly.",
+        "The International Energy Agency estimates that data centers used 485 terawatt-hours of electricity worldwide in 2025, and its central projection reaches about 950 terawatt-hours in 2030 [7]. These figures cover all data center services, not just AI. To picture this, 485 TWh equals 485 billion kilowatt-hours, roughly the annual electricity purchases of 45 million US homes, using the 2022 average of 10,791 kWh per residential customer [5]. This is a comparison of scale, not a claim that those homes were deprived of electricity.",
+        "This project shows how a data center’s electricity supply, cooling system, and grid upgrade agreement affect resource use and household energy costs in lower and higher income communities. I answer it with a simulation, presented as an interactive website, in which every choice a user has is a simplified assumption. The project also lets users experience Meadows’s idea of leverage points: changing equipment affects resource use, while changing payment rules affects who carries the cost [9]. The model shows relationships between these choices; it does not predict what will happen in a real city."
       ]
     },
     {
@@ -23,9 +23,9 @@
       "eyebrow": "02 / Electricity Use",
       "takeaway": "Efficiency matters. Demand still matters.",
       "paragraphs": [
-        "A data center needs power to run, and its carbon emissions depend in part on how that power is made. A lower carbon source can reduce emissions while leaving the need for power plants, power lines, and cooling in place. This is why my model separates the amount of electricity from its source. Berkeley Lab estimates that US data centers used 176 terawatt-hours in 2023, about 4.4 percent of national electricity use, and projects a range of 325–580 terawatt-hours by 2028 [2]. The range reflects different assumptions about equipment, operation, and cooling. It is not a prediction for the neighborhood in this simulation.",
-        "Masanet and colleagues give a different picture of the recent past. From 2010 to 2018, global data center computing workloads grew more than sixfold while electricity use grew about 6 percent. Improvements in equipment, utilization, and the shift toward larger cloud facilities helped offset the growth [8]. But I do not think past results mean that today’s AI growth will follow the same path. Berkeley Lab identifies growing use of accelerated servers as an important driver of rising demand [2]. Together, these studies show why efficiency matters without guaranteeing that total demand will stay flat. The earlier study describes global historical trends; the later report models US demand, so they are not a single continuous forecast.",
-        "These sources frame the electricity part of my simulation. Rather than guessing how fast AI demand will grow, I keep computing work fixed and multiply total facility electricity by an emissions factor. This isolates the effect of the power source and follows the accounting method described in EPA guidance [6]. The factors, 400 and 50 kilograms of CO₂e per megawatt-hour, are illustrative higher- and lower-carbon inputs. They are not measured supplies for this site or guarantees about a particular technology. The model leaves out hardware manufacturing, construction, and backup generators, so it covers only part of the environmental cost."
+        "A data center needs electricity to run its servers and cooling systems. This electricity usually comes from the local grid, which combines power from different types of power plants. Coal and natural gas plants burn fuel to generate electricity, releasing carbon dioxide. Wind turbines use moving air, hydropower uses flowing water, and solar panels convert sunlight into electricity without burning fuel. These sources produce much lower carbon emissions during operation. Lower-carbon electricity therefore means fewer emissions for the same amount of electricity used, not that the data center needs less power. This is why my model separates the amount of electricity from its source. Berkeley Lab estimates that US data centers used 176 terawatt-hours in 2023, or about 4.4 percent of national electricity use, and projects that this could rise to between 325 and 580 terawatt-hours by 2028, with AI servers as a major reason [12]. Since data centers already use a significant share of grid electricity, their choices can affect other users connected to it. The wide range in the projection also shows that the future depends on choices not yet made, which is what my simulation can explore.",
+        "Masanet and colleagues’ research gives a different picture of the recent past. From 2010 to 2018, computing in data centers rose about six times even though electricity use grew only about 6 percent, because gains in efficiency offset most of the growth [8]. But I do not think past results mean that today’s AI growth will follow the same path. The gains Masanet describes included more efficient equipment, better utilization, and moving work into larger cloud facilities. Berkeley Lab identifies growing use of accelerated servers as a major driver of rising demand [12]. So Masanet shows us efficiency matters, and Berkeley Lab suggests that efficiency alone may not keep demand flat this time. These studies cover different periods and regions; they are not a single continuous forecast.",
+        "These two sources are the foundations for the electricity part of my simulation. I keep computing work fixed and multiply total facility electricity use by an emissions factor. This isolates the effect of the power source instead of guessing how fast AI demand will grow. The calculation follows the basic method in EPA guidance [4]. The two factors I use, 400 and 50 kilograms of CO₂e per megawatt-hour, are examples I chose to represent higher- and lower-carbon supplies. Wind, solar, and hydro illustrate the lower-carbon approach; these coefficients are not measured values for a particular facility. The model does not consider emissions from making hardware, construction, and backup generators, so it covers only part of the environmental cost."
       ]
     },
     {
@@ -34,10 +34,11 @@
       "eyebrow": "03 / Cooling and Water Use",
       "takeaway": "A tradeoff between water and power",
       "paragraphs": [
-        "Cooling is a second environmental cost, and the two cooling methods in my model trade water for power. Mytton explains that cooling needs depend on local conditions and that onsite water figures leave out water used to generate electricity [3]. In my simulation, dry cooling uses less water but more power than evaporative cooling. Berkeley Lab discusses this possible tradeoff [2]. The size of the difference is chosen for this example, not a rule for every facility.",
-        "Research on US data centers shows that both location and power supply affect environmental costs [7]. The same amount of water matters more where water is scarce. Because my model leaves out watersheds, seasons, and drought, it reports liters without assigning a water stress score. Dry cooling alone does not prove that a data center has no effect on water systems. In this scenario it shifts some demand from onsite water to the electricity system, with an emissions effect that depends on the power source.",
-        "The input ledger below makes the comparison reproducible. A 10-megawatt computing load running at 80 percent utilization for 8,760 hours uses 70,080 MWh a year before cooling and other overhead. Total facility electricity is 1.20 times that amount with evaporative cooling and 1.35 times with dry cooling. Direct water use is 1.20 or 0.02 liters per kilowatt-hour of computing electricity. These are fixed teaching inputs, not measurements from a particular facility. Users choose the power source, cooling method, income profile, and cost-sharing rule; the other values stay fixed.",
-        "The distinction between computing electricity and total facility electricity matters. The overhead multiplier includes power used beyond the computing equipment, while the water intensity here is applied to computing electricity. A common denominator makes the comparison easier to follow. Changing the denominator or leaving out indirect water could change how a facility looks, even without changing its operation. The ledger therefore states both the number and what it measures [2][3]."
+        "Cooling is a second environmental cost in addition to electricity, and the two cooling methods in my model trade water for power. Evaporative cooling removes heat as water evaporates; dry cooling transfers heat to air. Mytton separates onsite cooling water from water used to make electricity; my model counts only the former [10]. Dry cooling uses less direct water but more power in my simulation. Research supports this possible tradeoff, but its size is chosen for this example [12].",
+        "An air-cooled chiller removes heat without relying on water evaporation. Shehabi and colleagues explain that these systems “employ air-cooled condensers to remove heat from the system” (40). This saves onsite water, but it can require more electricity. As the report states, “While air-cooled chillers use no water, they use more energy” (45) [12]. An evaporative cooling tower, on the other hand, removes heat as some of its water evaporates, creating a need for replacement water. This approach can use less electricity than an air-cooled chiller, but it consumes water. The choice therefore involves a tradeoff between onsite water use and electricity use.",
+        "Research on US data centers shows that both location and power supply affect environmental costs [13]. The same amount of water matters more where water is scarce. Because my model leaves out watersheds, seasons, and drought, it reports liters without estimating local water stress. Dry cooling alone does not prove that a data center has no effect on water systems: extra electricity can also require water at power plants, outside this model’s boundary.",
+        "Viborillas, a town in Mexico’s drought-prone state of Querétaro, provides a concrete example. In a 2026 report, some residents said they received water only three days a week, while others reported going without it for as long as a month. Resident Rita Zeferino said, “Sometimes we get water, sometimes we don’t” [2]. Residents worried that nearby data centers were worsening shortages, although a local official said water problems existed before the centers arrived. The report does not establish how much of the shortage data centers caused, but it shows why additional industrial water demand raises concerns where families already struggle to meet basic needs.",
+        "To keep the numbers and tradeoff easy to follow, the appendix lists the main inputs. Users can change the power source, cooling method, household income, and cost-sharing rule; the other values are chosen by me. The input ledger below presents that appendix for the website."
       ]
     },
     {
@@ -46,11 +47,10 @@
       "eyebrow": "04 / Income and Cost Sharing",
       "takeaway": "The same bill. A different burden.",
       "paragraphs": [
-        "The third element is household budgets, because the same bill has a different weight for families with different incomes. ACEEE defines energy burden as “the percentage of household income spent on energy bills” [4]. This is why my model compares lower and higher incomes using the same energy bill: annual incomes of $30,000 and $100,000 and a yearly bill of $1,800. These are comparison values, not survey results. Keeping the bill the same makes the effect of income easier to see.",
-        "A reported example adds a household perspective. Michelle Jarboe’s 2026 News 5 Cleveland report follows Keith and Cheryl Kasnik in Perry Township. Their electric bill exceeded $500 in December and $600 in February; December–March spending was about 60 percent higher than a year earlier. The nearby operation was a cryptocurrency mining campus, not an identified AI facility. The article does not establish how much of this household’s increase it caused [10]. I use this case to illustrate affordability concerns, not to calibrate the simulation or assume the Kasniks’ income.",
-        "Rules can change who carries infrastructure risk. In July 2025, PUCO ordered a data center tariff for AEP Ohio, stating that the settlement “safeguards other non-data center customers from cost-shifting risks” [5]. Such protections depend on the utility, contract, and customers covered. Jarboe also describes a stalled June 2026 reform effort, House Bill 646, and disagreements over tax breaks [10]. This is a dated policy example, not a claim about the bill’s current status. A tariff cannot simply be treated as a guarantee that every household’s electricity bill will fall.",
-        "The simulation represents cost sharing with three choices: the company pays, residents pay, or each pays half. The assumed upgrade costs $20 million, spread over ten years and 10,000 households. This gives annual household charges of $0, $200, or $100, without interest. The household charge pays for the modeled upgrade, not for the data center’s electricity purchases. These round numbers make the allocation easy to compare; they do not forecast a real utility bill.",
-        "This choice applies Meadows’s idea of leverage points. Her framework places system rules above changes to individual numerical parameters as potential places to intervene [9]. Applied here, an agreement about who must fund infrastructure changes how costs are allocated across households. This is my application of her systems framework, not a data center case from her essay. Changing income or the funding rule affects household burden while the facility’s electricity and cooling settings stay the same."
+        "The third element of the model is household budgets, because the same bill has a very different weight for families with different incomes. The American Council for an Energy-Efficient Economy defines energy burden as “the percentage of household income spent on energy bills” [3]. This definition is why my model compares lower and higher incomes using the same energy bill: incomes of $30,000 and $100,000 and a yearly bill of $1,800. These are comparison values, not survey results, and keeping the bill the same makes the impact of income easier to see.",
+        "One example adds a household perspective. In 2026, News 5 Cleveland followed Keith and Cheryl Kasnik of Perry Township, near a cryptocurrency mining campus. Their monthly electric bill passed $500 in December and $600 in February, and from December through March they paid about 60 percent more for power than a year earlier [6]. The nearby facility was not identified as an AI center, and the report does not establish its share of the increase. For a family earning $30,000, the same dollar increase would be a far heavier burden than for a family earning $100,000; those are my comparison incomes, not the Kasniks’ reported income.",
+        "Policies can help protect households from extra costs. Ohio’s tariff requires large new data centers served by AEP Ohio to pay minimum charges based on contracted capacity, even if they use less [11]. In February 2026, AEP Ohio reported 5,642 MW of binding contracts under the tariff, compared with earlier requests for 30,000 MW. The company said financial commitments help avoid unnecessary infrastructure. These new contracts are separate from 12,219 MW contracted before the tariff [1]. The update suggests reduced risk of paying for speculative construction; it does not demonstrate lower household bills or energy burdens.",
+        "Therefore, the model offers three choices: the company pays, residents pay, or each pays half. The assumed upgrade costs $20 million, spread over ten years and 10,000 households. This gives annual household charges of $0, $200, or $100, without interest. This choice applies Meadows’s idea of leverage points: changing the rules about who pays can be a stronger place to intervene than adjusting a single payment [9]. These charges recover the modeled grid upgrade, not the facility’s own electricity bill."
       ]
     },
     {
@@ -59,9 +59,9 @@
       "eyebrow": "05 / Results and Limitations",
       "takeaway": "What these choices can—and cannot—show",
       "paragraphs": [
-        "Under the stated assumptions, the simulation gives three important results. Choosing the lower carbon source reduces operational electricity emissions to one-eighth of the grid scenario, an 87.5 percent reduction, while electricity demand stays unchanged. Dry cooling reduces direct water use by about 98.3 percent but raises total facility electricity by 12.5 percent. The $1,800 bill is a 6 percent burden for the $30,000 household and 1.8 percent for the $100,000 household. The residents-pay option raises these to about 6.67 percent and 2.00 percent. These are calculated comparisons, not research measurements.",
-        "Each result points back to my argument. A cleaner power source lowers one environmental cost without lowering the demand placed on the grid. Dry cooling changes the balance between water and power. Because the model holds the existing household bill fixed, only the cost-sharing rule changes the added household charge. Lower resource use and fair cost sharing are separate problems. Solving one does not automatically solve the other.",
-        "The model’s limits are also clear. Fixed inputs leave out future growth, changes in equipment use, hot days, and peak demand. It does not connect the data center’s electricity consumption to household electricity prices, so the extra power used by dry cooling never appears as an additional residential electricity charge. It does not estimate jobs, tax revenue, land impacts, supply chains, or AI’s possible social benefits. It cannot weigh all of AI’s gains against its costs or support a complete judgment about any real facility."
+        "Under its assumptions, the simulation gives three important results. Choosing the low-carbon source reduces electricity emissions to one-eighth of the higher-carbon scenario, an 87.5% reduction, but leaves electricity demand unchanged. Dry cooling cuts onsite water use by about 98% but raises total electricity use by about 12.5%. The $1,800 bill is a 6% burden for the $30,000 household and 1.8% for the $100,000 household; the residents-pay option raises these to about 6.7% and 2.0%. These are calculated examples, not measured outcomes at a real facility.",
+        "Each result points back to my argument. A cleaner power source lowers the environmental cost without lowering the demand placed on the grid. Dry cooling moves a cost rather than removing it. And because the model holds the household bill fixed, only the cost-sharing rule changes what households pay. Lower resource use and fair cost sharing are two separate problems, and solving one does not solve the other.",
+        "The limits of this model are clear. Its fixed inputs ignore factors such as future growth, changes in equipment use, hot days, and peak demand. The model also does not link the data center’s electricity use to household bills, so the extra power from dry cooling never shows up as a cost to residents. It does not estimate jobs, tax revenue, land impacts, supply chains, or AI’s possible social benefits, so it cannot weigh AI’s gains against its costs or support a full judgment about any real AI data center."
       ]
     },
     {
@@ -70,81 +70,87 @@
       "eyebrow": "06 / Conclusion",
       "takeaway": "Two responsibilities, together",
       "paragraphs": [
-        "My question asked how choices about power, cooling, and cost sharing affect the environmental costs of AI and the costs paid by nearby households. The model’s answer is that these choices address different parts of the problem. A lower carbon power source lowers emissions without lowering electricity demand. Dry cooling lowers direct water use but raises electricity use under these assumptions. A cost-sharing rule decides who funds the modeled upgrade, and energy burden shows why the same charge matters more to a lower-income household.",
-        "The household reporting and the Ohio tariff bring this question beyond equipment choices. Residents need clear information about resource demand, financial responsibilities, and the reach of any promised protections. Responsible AI growth needs both lower resource use and fair cost sharing. Before calling a project sustainable, we should ask what it requires from the environment and whose interests are represented when its terms are set."
+        "My question asked how choices about power, cooling, and cost sharing affect the environmental costs of AI and the costs paid by nearby households. The model’s answer is that these choices affect different problems. A low-carbon power source lowers emissions without lowering electricity demand, and dry cooling lowers direct water use but raises electricity use under these assumptions. A cost-sharing rule decides who pays for the modeled upgrade, and energy burden shows why the same charge matters more to a lower-income household. The Kasniks’ bills and the Ohio tariff show why responsible AI growth needs both: lower resource use protects the environment, and fair cost sharing protects the people living alongside the infrastructure that supports computing."
       ]
     }
   ],
   "sources": [
     {
       "id": 1,
-      "author": "International Energy Agency",
+      "author": "AEP Ohio",
       "year": "2026",
-      "title": "Key Questions on Energy and AI",
-      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
-      "note": "2025 global estimate and 2030 central projection for all data centers, not AI alone. Published April 16, 2026.",
+      "title": "AEP Ohio Updates PUCO on Data Center Load: Figures Show Tariff is Working",
+      "url": "https://www.aepohio.com/company/news/view?releaseID=10753",
+      "note": "Utility report, 13 February 2026. Contract commitments and infrastructure planning; not a measurement of lower household bills.",
       "peerReviewed": false,
-      "kind": "Institutional report or guidance"
+      "kind": "Utility report",
+      "mla": "“AEP Ohio Updates PUCO on Data Center Load: Figures Show Tariff is Working.” *AEP Ohio*, 13 Feb. 2026."
     },
     {
       "id": 2,
-      "author": "Shehabi, A., Smith, S. J., Hubbard, A., Newkirk, A., Lei, N., Siddik, M. A. B., Holecek, B., Koomey, J., Masanet, E., and Sartor, D.",
-      "year": "2024",
-      "title": "2024 United States Data Center Energy Usage Report",
-      "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/us_data_center_energy_usage_report_lbnl-2001637_0.pdf",
-      "note": "Lawrence Berkeley National Laboratory. LBNL-2001637. DOI 10.71468/P1WC7Q. Electricity estimates on pages 5–6.",
+      "author": "Baptista, Diana, and Fintan McDonnell",
+      "year": "2026",
+      "title": "Resistance Blooms in Mexico’s Data Centre Valley",
+      "url": "https://www.context.news/ai/long-read/resistance-blooms-in-mexicos-data-centre-valley/",
+      "note": "Context, Thomson Reuters Foundation, 4 February 2026. Resident interviews in Viborillas; no measured causal share of shortages.",
       "peerReviewed": false,
-      "kind": "Institutional report or guidance"
+      "kind": "Reported community case",
+      "mla": "Baptista, Diana, and Fintan McDonnell. “Resistance Blooms in Mexico’s Data Centre Valley.” *Context*, Thomson Reuters Foundation, 4 Feb. 2026."
     },
     {
       "id": 3,
-      "author": "Mytton, D.",
-      "year": "2021",
-      "title": "Data centre water consumption",
-      "url": "https://doi.org/10.1038/s41545-021-00101-w",
-      "note": "npj Clean Water, 4, Article 11. Peer reviewed Perspective; explains water consumption and measurement boundaries, not a universal dry cooling penalty.",
-      "peerReviewed": true,
-      "kind": "Peer reviewed Perspective"
-    },
-    {
-      "id": 4,
       "author": "American Council for an Energy-Efficient Economy",
       "year": "2024",
       "title": "Data Update: City Energy Burdens",
       "url": "https://www.aceee.org/sites/default/files/pdfs/data_update_-_city_energy_burdens_0.pdf",
       "note": "September 2024 brief. Used for the energy burden concept, not to attribute household bills to data centers.",
       "peerReviewed": false,
-      "kind": "Institutional report or guidance"
+      "kind": "Institutional report or guidance",
+      "mla": "*Data Update: City Energy Burdens*. American Council for an Energy-Efficient Economy, Sept. 2024."
     },
     {
-      "id": 5,
-      "author": "Public Utilities Commission of Ohio",
-      "year": "2025",
-      "title": "PUCO orders AEP Ohio to create data center specific tariff",
-      "url": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79",
-      "note": "July 9, 2025. A dated example of infrastructure risk allocation, not a nationwide rule or current tariff audit.",
-      "peerReviewed": false,
-      "kind": "Institutional report or guidance"
-    },
-    {
-      "id": 6,
+      "id": 4,
       "author": "U.S. Environmental Protection Agency",
       "year": "2025",
       "title": "eGRID: Determining Emissions from Electricity Use",
       "url": "https://www.epa.gov/system/files/documents/2025-01/using-egrid-to-determine-emissions.pdf",
       "note": "Supports annual electricity emissions accounting. Website factors are illustrative, not extracted eGRID values.",
       "peerReviewed": false,
-      "kind": "Institutional report or guidance"
+      "kind": "Institutional report or guidance",
+      "mla": "*eGRID: Determining Emissions from Electricity Use*. U.S. Environmental Protection Agency, 2025."
+    },
+    {
+      "id": 5,
+      "author": "U.S. Energy Information Administration",
+      "year": "2024",
+      "title": "How Much Electricity Does an American Home Use?",
+      "url": "https://www.eia.gov/tools/faqs/faq.php?id=97&t=3",
+      "note": "2022 average: 10,791 kWh purchased per residential customer. Used only for the 485 TWh scale comparison.",
+      "peerReviewed": false,
+      "kind": "Institutional data",
+      "mla": "\"How Much Electricity Does an American Home Use?\" *U.S. Energy Information Administration*, 8 Jan. 2024."
+    },
+    {
+      "id": 6,
+      "author": "Jarboe, Michelle",
+      "year": "2026",
+      "title": "Are Data Centers Driving Up Your Power Bills? It’s a Simple Question with a Complex Answer.",
+      "url": "https://www.news5cleveland.com/news/local-news/oh-stark/are-data-centers-driving-up-your-power-bills-its-a-simple-question-with-a-complex-answer",
+      "note": "News 5 Cleveland, 29 June 2026. Household reporting near a cryptocurrency mining campus. The article does not isolate that facility’s contribution to the household’s bill increase.",
+      "peerReviewed": false,
+      "kind": "Reported household case",
+      "mla": "Jarboe, Michelle. \"Are Data Centers Driving Up Your Power Bills? It's a Simple Question with a Complex Answer.\" *News 5 Cleveland*, 29 June 2026."
     },
     {
       "id": 7,
-      "author": "Siddik, M. A. B., Shehabi, A., and Marston, L.",
-      "year": "2021",
-      "title": "The environmental footprint of data centers in the United States",
-      "url": "https://doi.org/10.1088/1748-9326/abfba1",
-      "note": "Environmental Research Letters, 16(6), 064017. Peer reviewed spatial analysis. Open manuscript: https://escholarship.org/uc/item/3xw3z2qp",
-      "peerReviewed": true,
-      "kind": "Peer reviewed research article"
+      "author": "International Energy Agency",
+      "year": "2026",
+      "title": "Key Questions on Energy and AI",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+      "note": "2025 global estimate and 2030 central projection for all data centers, not AI alone. Published April 16, 2026.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance",
+      "mla": "*Key Questions on Energy and AI*. International Energy Agency, 16 Apr. 2026."
     },
     {
       "id": 8,
@@ -154,7 +160,8 @@
       "url": "https://doi.org/10.1126/science.aba3758",
       "note": "Science, 367(6481), 984–986. Peer reviewed Policy Forum. Historical efficiency analysis for 2010–2018, not a forecast of AI demand.",
       "peerReviewed": true,
-      "kind": "Peer reviewed Policy Forum"
+      "kind": "Peer reviewed Policy Forum",
+      "mla": "Masanet, Eric, et al. \"Recalibrating Global Data Center Energy-Use Estimates.\" *Science*, vol. 367, no. 6481, 2020, pp. 984-86."
     },
     {
       "id": 9,
@@ -164,20 +171,56 @@
       "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/",
       "note": "The Sustainability Institute. Assigned course reading. Information flows, rules, and reinforcing advantages provide a systems framework; the data center applications are this project’s interpretation.",
       "peerReviewed": false,
-      "kind": "Course reading"
+      "kind": "Course reading",
+      "mla": "Meadows, Donella H. \"Leverage Points: Places to Intervene in a System.\" *The Donella Meadows Project*, 1999."
     },
     {
       "id": 10,
-      "author": "Jarboe, Michelle",
-      "year": "2026",
-      "title": "Are Data Centers Driving Up Your Power Bills? It’s a Simple Question with a Complex Answer.",
-      "url": "https://www.news5cleveland.com/news/local-news/oh-stark/are-data-centers-driving-up-your-power-bills-its-a-simple-question-with-a-complex-answer",
-      "note": "News 5 Cleveland, 29 June 2026. Household reporting near a cryptocurrency mining campus. The article does not isolate that facility’s contribution to the household’s bill increase.",
+      "author": "Mytton, D.",
+      "year": "2021",
+      "title": "Data centre water consumption",
+      "url": "https://doi.org/10.1038/s41545-021-00101-w",
+      "note": "npj Clean Water, 4, Article 11. Peer reviewed Perspective; explains water consumption and measurement boundaries, not a universal dry cooling penalty.",
+      "peerReviewed": true,
+      "kind": "Peer reviewed Perspective",
+      "mla": "Mytton, David. \"Data Centre Water Consumption.\" *npj Clean Water*, vol. 4, 2021, article 11."
+    },
+    {
+      "id": 11,
+      "author": "Public Utilities Commission of Ohio",
+      "year": "2025",
+      "title": "PUCO orders AEP Ohio to create data center specific tariff",
+      "url": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79",
+      "note": "July 9, 2025. A dated example of infrastructure risk allocation, not a nationwide rule or current tariff audit.",
       "peerReviewed": false,
-      "kind": "Reported household case"
+      "kind": "Institutional report or guidance",
+      "mla": "\"PUCO Orders AEP Ohio to Create Data Center Specific Tariff.\" *Public Utilities Commission of Ohio*, 9 July 2025."
+    },
+    {
+      "id": 12,
+      "author": "Shehabi, A., Smith, S. J., Hubbard, A., Newkirk, A., Lei, N., Siddik, M. A. B., Holecek, B., Koomey, J., Masanet, E., and Sartor, D.",
+      "year": "2024",
+      "title": "2024 United States Data Center Energy Usage Report",
+      "url": "https://doi.org/10.71468/P1WC7Q",
+      "note": "Lawrence Berkeley National Laboratory. LBNL-2001637. DOI 10.71468/P1WC7Q. Electricity estimates on pages 5–6.",
+      "peerReviewed": false,
+      "kind": "Institutional report or guidance",
+      "mla": "Shehabi, Arman, et al. *2024 United States Data Center Energy Usage Report*. Lawrence Berkeley National Laboratory, Dec. 2024."
+    },
+    {
+      "id": 13,
+      "author": "Siddik, M. A. B., Shehabi, A., and Marston, L.",
+      "year": "2021",
+      "title": "The environmental footprint of data centers in the United States",
+      "url": "https://doi.org/10.1088/1748-9326/abfba1",
+      "note": "Environmental Research Letters, 16(6), 064017. Peer reviewed spatial analysis. Open manuscript: https://escholarship.org/uc/item/3xw3z2qp",
+      "peerReviewed": true,
+      "kind": "Peer reviewed research article",
+      "mla": "Siddik, Md Abu Bakar, et al. \"The Environmental Footprint of Data Centers in the United States.\" *Environmental Research Letters*, vol. 16, no. 6, 2021, article 064017."
     }
   ],
-  "wordCount": 1710,
-  "wordCountRule": "Whitespace-separated words in the six adapted Draft 2 chapters; excludes headings, citation markers, interface excerpts, the input ledger, and references.",
-  "adaptationNote": "Adapted from Draft 2, pages 8–15 of the supplied paper. Wording is lightly edited for the web; forecasts, the reported household case, and model boundaries are clarified. The input table appears in the model ledger. Peer-feedback prompts and Draft 1 are not part of this edition."
+  "wordCount": 1853,
+  "wordCountRule": "Whitespace-separated words in the six final-draft chapters; excludes headings, numbered citations, interface summaries, the appendix, and references.",
+  "adaptationNote": "Final draft web edition, including the restored location discussion and Viborillas interviews. Card descriptions and animation captions summarize this text. Wording is lightly edited for readability and to distinguish forecasts, reported concerns, and model assumptions. The paper’s input table appears in the appendix below.",
+  "sourceSummary": "The final draft’s 13 sources: 3 peer reviewed publications, 7 institutional or utility sources, 1 course reading, and 2 news reports. MLA entries appear in alphabetical order; numbered links connect the text to each source."
 }
